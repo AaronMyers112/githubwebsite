@@ -13,7 +13,7 @@ export function CreateHeader() {
 			<span />
 			<div className = 'header__info'>
 				<div>
-					<p>This website was created to show my deign skills,<br/> as well as my understanding of React</p>
+					<p>This website was created to show my design skills,<br/> as well as my understanding of React</p>
 				</div>
 			</div>
 		</div>
