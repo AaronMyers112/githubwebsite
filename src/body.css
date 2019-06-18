@@ -1,12 +1,27 @@
-.repos {
-	position: absolute;
-	dispaly: flex;
-	width: 97vw;
-	justify-content: center;
-	flex-direction: column;
+.container > a{
+	text-decoration: none;
+	color: black;
 }
 
-#portfolio-website{
-	display: inherit;
+.container_project:hover{
+	background: #D1CEC4;
+}
+.container_project {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 99vw;
+}
+
+.container_project > h1 {
+	z-index: 10;
+	font-size: calc(10px + 2vmin);
 	align-self: flex-start;
+	padding: 1vmin 5vmin;
+	color: #A6B1EB;
+}
+
+.container_project > p {
+	padding-bottom: 5vmin;
+	font-size: calc(10px + 1vmin);
 }

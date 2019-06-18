@@ -1,3 +1,10 @@
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #EAE7DC;
 }
@@ -11,7 +18,8 @@ body {
   display: flex;
   position: relative;
   align-items: stretch;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 2vmin);
+  margin-bottom: 26vh;
 }
 
 .circle {
@@ -24,16 +32,16 @@ body {
   border: 3px solid #A6B1EB;
   transform: rotate(180deg);
   border-radius: 100%;
+  z-index: 1;
 }
 
 .header__logo {
-  position: absolute;
-  top: 35%;
-  left: 15%;
+  z-index: 2;
   display: inherit;
   align-items: center;
   justify-content: center;
   color: #A6B1EB;
+  padding-left: 5vw;
 }
 
 .header__logo h4{

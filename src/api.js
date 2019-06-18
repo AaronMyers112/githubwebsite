@@ -1,21 +1,21 @@
 import { useState, useEffect } from 'react';
 
 function getRepos() {
-	return fetch(`https://api.github.com/users/aaronmyers112/repos?callback=result`, {
+	return( fetch(`https://api.github.com/users/aaronmyers112/repos`, {
 		method: "GET",
 		headers: {
 			'Accept': 'application/vnd.github.v3+json',
-		}
-	})
-	.then((res) => res.json())
-	.then((res) => res.data)
-	.then((data) => 
-		data.map((result) => ({
-			url: result.url,
-			description: result.description,
-			name: result.name,
-		})),
-	);
+			}
+		})
+		.then((response) => response.json())
+		.then((data) =>		
+			data.map((results) => ({
+				name: results.name,
+				des: results.description,
+				url: results.html_url,
+			})),
+	)
+	)
 }
 
 export function useRepos () {
@@ -23,14 +23,14 @@ export function useRepos () {
 	const [repos, setRepos] = useState([]);
 	useEffect(() => {
 		getRepos()
-			.then((repos) => {
-				setRepos(repos);
+			.then((data) => {
+				setRepos(data);
 				setLoading(false);
 			})
 			.catch((e) => {
 				setLoading(false);
 			})
-	}, []);
+	}, [repos]);
 	return {
 		loading,
 		repos,

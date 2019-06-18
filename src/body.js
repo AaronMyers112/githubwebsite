@@ -1,16 +1,14 @@
 import React from 'react';
 
 export function Repos(props) {
-	console.log(props.data);
     return (
-        	<div className = 'project'>
-        		<h4>
-	        		<a href={props.data.url}>
-	        			{props.data.name}
-	        		</a>
-        		</h4>
-        		<h1>Repo</h1>
-        		<p>{props.data.des}</p>
+        <div className = 'container'>
+        	<div className = 'container_project' onClick={() => props.onSubmit(props.name)}>
+        		<h1>
+	        			{props.name}
+        		</h1>
+        		<p>{props.des}</p>
         	</div>
+        </div>
     );
 }
