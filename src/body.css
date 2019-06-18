@@ -1,27 +1,33 @@
-.container > a{
-	text-decoration: none;
-	color: black;
+.container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(5px + 1vh);
 }
 
-.container_project:hover{
-	background: #D1CEC4;
-}
-.container_project {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.container > a {
+	list-style: none;
+	text-decoration: none;
+	color: inherit;
+	border-top: 1px solid #66f1fa;
 	width: 99vw;
 }
 
-.container_project > h1 {
-	z-index: 10;
-	font-size: calc(10px + 2vmin);
-	align-self: flex-start;
-	padding: 1vmin 5vmin;
-	color: #A6B1EB;
+.container_project{
+	padding: 5vh;
+	transition: font-size 1s;
 }
 
-.container_project > p {
-	padding-bottom: 5vmin;
-	font-size: calc(10px + 1vmin);
+.container_project:hover {
+	font-size: calc(10px + 1vh);
+}
+
+.container_project > h1 {
+	color: #66f1fa;
+	padding: 5vw;
+}
+
+.container_project>p{
+	padding-bottom: 5vw;
+	color: #59CFD7;
 }

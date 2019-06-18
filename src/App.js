@@ -23,8 +23,10 @@ function App() {
 	}
     return (
         <div className="App">
-			<CreateHeader />
-			{loaded}
+        <CreateHeader />
+			<div className="body">
+				{loaded}
+			</div>
         </div>
     );
 
