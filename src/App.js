@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { CreateHeader } from './header';
 import { useRepos } from './api';
 import { Repos } from './body';
@@ -7,7 +7,6 @@ import './body.css';
 
 function App() {
 	const { loading, repos } = useRepos();
-	const [url, setUrl] = useState("");
 	let loaded;
 
 
@@ -18,7 +17,7 @@ function App() {
 	}
 	else{
 		loaded = repos.map((data,index) => (
-				<Repos key={index} url={data.url} name={data.name} des={data.des} onSubmit={setUrl} />
+				<Repos key={index} url={data.url} name={data.name} des={data.des} />
 		))
 	}
     return (
